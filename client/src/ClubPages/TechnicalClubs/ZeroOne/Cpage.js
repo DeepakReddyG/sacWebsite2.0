@@ -44,7 +44,7 @@ var Page = () => {
                       </div>
                       <div className="club-body-in-three">
                         <button>
-                          <Scroll to="clubs-what-do" smooth={true} duration={0}>
+                          <Scroll to="clubs-what-do" smooth={true} offset={-150} duration={0}>
                             <p>Explore the Club</p>
                           </Scroll>
                         </button>
