@@ -1,43 +1,35 @@
 const express = require('express');
-const mysql = require('mysql2/promise');
-const cors = require('cors'); // Import the cors package
+const cors = require('cors');
+const mysql = require('mysql2');
+const path = require('path');
 
 const app = express();
 const port = 3001;
-
-// Use the cors middleware to allow requests from all origins
+app.use(express.json());
 app.use(cors());
 
-async function main() {
-  const db = await mysql.createConnection({
-    user: 'root',
-    password: 'sai@1234',
-    database: 'siltable',
-  });
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root', 
+  password: 'deepak@123',
+  database: 'sacwebsite',
+});
 
-  try {
-    await db.connect(); // Connect to the database
-
-    // Define your API routes here
-    app.get('/api/registrations', async (req, res) => {
-      try {
-        const query = 'SELECT * FROM tableName';
-        const [rows, fields] = await db.execute(query);
-        res.json(rows);
-      } catch (err) {
-        console.error('Error querying the database: ' + err.message);
-        res.status(500).send('Internal Server Error');
-      }
-    });
-
-    // Start the server
-    app.listen(port, () => {
-      console.log(`Server is running on port ${port}`);
-    });
-  } catch (err) {
-    console.error('Database connection failed: ' + err.message);
+connection.connect((err) => {
+  if (err) {
+    console.error('Error connecting to MySQL: ' + err.stack);
+    return;
   }
-}
+  console.log('Connected to MySQL as id ' + connection.threadId);
+});
 
-main();
 
+
+app.get('/x', (req, res) => {
+  res.send('Hello World!');
+  console.log('Hello World!');
+});
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
