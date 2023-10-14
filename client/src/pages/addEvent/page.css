@@ -1,0 +1,47 @@
+.event-cards-main {
+    width: 100%;
+}
+.event-card-container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.event-card {
+    border: 2px solid black;
+    display: flex;
+    width: 30%;
+    margin: 10px;
+}
+.event-card-in {
+    width: 100%;
+    margin: auto;
+}
+.event-card-one img {
+    width: 100%;
+}
+
+.event-card-two-one {
+
+}
+.event-card-two-one h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+}
+.event-card-two-one p {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+}
+.event-card-two-two {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+}
+.event-card-two-two p {
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}

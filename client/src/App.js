@@ -26,6 +26,10 @@ import RegistrationTable from "./pages/SilRegistrations/RegistrationTable";
 import RegistrationData from "./pages/SilRegistrations/RegistrationData";
 import DepartmentWise from "./pages/SilRegistrations/DepartmentWise";
 
+import AddEvent from '../src/pages/addEvent/page';
+import GetEvents from '../src/pages/addEvent/getEvents';
+
+
 function App() {
   const [isLoading, setLoading] = useState(true);
 
@@ -67,7 +71,9 @@ function App() {
     { path: "/swachhatahiseva", element: <SHS/>},
     { path: "/registration", element: <RegistrationTable/>},
     { path: "/registrationdata", element: <RegistrationData/>},
-    { path: "/departmentwise", element: <DepartmentWise/>}
+    { path: "/departmentwise", element: <DepartmentWise/>},
+    { path: "/addevent", element: <AddEvent/>},
+    { path: "/getevents", element: <GetEvents/>},
     
   ];
 
