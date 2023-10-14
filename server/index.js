@@ -1,18 +1,20 @@
+require('dotenv').config(); // Load environment variables from .env file
+
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2');
 const path = require('path');
 
 const app = express();
-const port = 3001;
+const port = process.env.server_port || 3001; // Use the environment variable or default to 3001
 app.use(express.json());
 app.use(cors());
 
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'root', 
-  password: 'deepak@123',
-  database: 'sacwebsite',
+  user: process.env.db_user,
+  password: process.env.db_password,
+  database: process.env.db_name,
 });
 
 connection.connect((err) => {
@@ -22,8 +24,6 @@ connection.connect((err) => {
   }
   console.log('Connected to MySQL as id ' + connection.threadId);
 });
-
-
 
 app.get('/x', (req, res) => {
   res.send('Hello World!');
