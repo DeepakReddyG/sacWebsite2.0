@@ -30,6 +30,10 @@ import AddEvent from '../src/pages/addEvent/page';
 import GetEvents from '../src/pages/addEvent/getEvents';
 
 
+import AddNews from '../src/pages/News/AddNewsForm';
+import GetNews from '../src/pages/News/NewsList';
+
+
 function App() {
   const [isLoading, setLoading] = useState(true);
 
@@ -74,6 +78,8 @@ function App() {
     { path: "/departmentwise", element: <DepartmentWise/>},
     { path: "/addevent", element: <AddEvent/>},
     { path: "/getevents", element: <GetEvents/>},
+    { path: "/addnews", element: <AddNews/>},
+    { path: "/getnews", element: <GetNews/>},
     
   ];
 

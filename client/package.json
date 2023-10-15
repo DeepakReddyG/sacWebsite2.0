@@ -28,6 +28,7 @@
     "dotenv": "^16.0.3",
     "googleapis": "^126.0.1",
     "jquery": "^3.6.4",
+    "jsonwebtoken": "^9.0.2",
     "mdb-react-ui-kit": "^5.1.0",
     "react": "^18.2.0",
     "react-back-to-top-button": "^0.0.14",
