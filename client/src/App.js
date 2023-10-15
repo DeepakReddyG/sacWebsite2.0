@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
+import { Navigate } from 'react-router-dom';
 
 import "./App.css";
 
@@ -32,7 +33,10 @@ import GetEvents from '../src/pages/addEvent/getEvents';
 
 import AddNews from '../src/pages/News/AddNewsForm';
 import GetNews from '../src/pages/News/NewsList';
+import NewsManagement from '../src/pages/News/NewsManagement';
 
+import Login from '../src/pages/Auth/Login';
+import Register from '../src/pages/Auth/Register';
 
 function App() {
   const [isLoading, setLoading] = useState(true);
@@ -53,6 +57,12 @@ function App() {
   if (isLoading) {
     return null;
   }
+
+
+  const isAuth = sessionStorage.getItem('token') ? true : false;
+
+
+  
 
   const routes = [
     { path: "/", element: <Home /> },
@@ -76,10 +86,13 @@ function App() {
     { path: "/registration", element: <RegistrationTable/>},
     { path: "/registrationdata", element: <RegistrationData/>},
     { path: "/departmentwise", element: <DepartmentWise/>},
-    { path: "/addevent", element: <AddEvent/>},
+    { path: "/addevent", element: isAuth ? <AddEvent/> : <Navigate to="/login"/>},
     { path: "/getevents", element: <GetEvents/>},
-    { path: "/addnews", element: <AddNews/>},
+    {path: '/addnews', element: isAuth? <AddNews/> : <Navigate to="/login"/>},
     { path: "/getnews", element: <GetNews/>},
+    { path: "/login", element: <Login/>},
+    { path: "/register", element: <Register/>},
+    { path: "/newsmanagement", element: <NewsManagement/>},
     
   ];
 
