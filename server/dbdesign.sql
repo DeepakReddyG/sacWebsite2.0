@@ -27,6 +27,6 @@ CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     user_name TEXT NOT NULL,
     user_password TEXT NOT NULL,
-    user_role ENUM('admin', 'clublead' 'user'),
+    user_role ENUM('admin', 'clublead', 'student', 'staff'),
     created_at TEXT NOT NULL
 );

@@ -7,7 +7,9 @@ import { AuthProvider } from './pages/Auth/AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// console log the Auth provider details
+// console log and display is user is authenticated or not
+console.log('Authenticated user:', localStorage.getItem('authenticatedUser'));
+
 
 root.render(
     <BrowserRouter>

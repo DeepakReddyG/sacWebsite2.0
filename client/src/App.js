@@ -21,7 +21,7 @@ import SIL from "./pages/SIL/Page";
 import CompletedEvents from './pages/CompletedEvent/Page';
 import SocialMedia from './pages/SocialMedia/page';
 import Feedback from "./pages/Feedback/Page";
-import ViewFeedback from "./pages/Admin/Page";
+import ViewFeedback from "./pages/Users/Admin/Page";
 import SHS from './pages/SHS/page';
 import RegistrationTable from "./pages/SilRegistrations/RegistrationTable";
 import RegistrationData from "./pages/SilRegistrations/RegistrationData";
@@ -34,6 +34,11 @@ import GetEvents from '../src/pages/addEvent/getEvents';
 import AddNews from '../src/pages/News/AddNewsForm';
 import GetNews from '../src/pages/News/NewsList';
 import NewsManagement from '../src/pages/News/NewsManagement';
+
+
+import UsersApp from '../src/pages/Users/UsersApp';
+
+import AdminConsole from './pages/Users/Admin/AdminConsole/adminConsole';
 
 import Login from '../src/pages/Auth/Login';
 import Register from '../src/pages/Auth/Register';
@@ -59,10 +64,6 @@ function App() {
   }
 
 
-  const isAuth = sessionStorage.getItem('token') ? true : false;
-
-
-  
 
   const routes = [
     { path: "/", element: <Home /> },
@@ -86,15 +87,19 @@ function App() {
     { path: "/registration", element: <RegistrationTable/>},
     { path: "/registrationdata", element: <RegistrationData/>},
     { path: "/departmentwise", element: <DepartmentWise/>},
-    { path: "/addevent", element: isAuth ? <AddEvent/> : <Navigate to="/login"/>},
+    { path: "/addevent", element: <AddEvent/>},
     { path: "/getevents", element: <GetEvents/>},
-    {path: '/addnews', element: isAuth? <AddNews/> : <Navigate to="/login"/>},
+    {path: '/addnews', element: <AddNews/>},
     { path: "/getnews", element: <GetNews/>},
     { path: "/login", element: <Login/>},
     { path: "/register", element: <Register/>},
     { path: "/newsmanagement", element: <NewsManagement/>},
+    { path: "/adminconsole", element: <AdminConsole/>},
+    { path: "/users/*", element: <UsersApp />}
     
   ];
+
+
 
   return (
     <div className="App">

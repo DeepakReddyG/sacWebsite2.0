@@ -7,7 +7,7 @@ class RegistrationForm extends Component {
     this.state = {
       user_name: '',
       user_password: '',
-      user_role: 'user',
+      user_role: 'student', // Default to "student"
     };
   }
 
@@ -56,7 +56,8 @@ class RegistrationForm extends Component {
             <select name="user_role" value={this.state.user_role} onChange={this.handleInputChange}>
               <option value="admin">Admin</option>
               <option value="clublead">Club Lead</option>
-              <option value="user">User</option>
+              <option value="staff">Staff</option>
+              <option value="student">Student</option>
             </select>
           </div>
 

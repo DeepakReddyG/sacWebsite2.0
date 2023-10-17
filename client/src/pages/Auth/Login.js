@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useAuth } from '../Auth/AuthContext';
-import { Navigate } from 'react-router-dom'; // Import Navigate for redirection
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 
 function Login() {
   const { login, isAuthenticated } = useAuth();
   const [credentials, setCredentials] = useState({ user_name: '', user_password: '' });
   const [error, setError] = useState();
+  const navigate = useNavigate(); // Create a navigate function
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,13 +26,24 @@ function Login() {
 
       if (response.ok) {
         const data = await response.json();
+
         if (data.isAuthenticated) {
-          // Store the user's username in localStorage
           localStorage.setItem('authenticatedUser', JSON.stringify({ user_name: data.user.user_name, user_role: data.user.user_role }));
           localStorage.setItem('userToken', data.token);
-          sessionStorage.setItem('authenticatedUser', JSON.stringify({ user_name: data.user.user_name, user_role: data.user.user_role}));
+          sessionStorage.setItem('authenticatedUser', JSON.stringify({ user_name: data.user.user_name, user_role: data.user.user_role }));
           sessionStorage.setItem('userToken', data.token);
-          login(data.user);
+
+          login(data.user); // Call the login function from AuthContext
+
+
+          const routesByUserType = {
+            admin: '/users/admin', // Update with the actual route path for admin
+            staff: '/users/staff', // Update with the actual route path for staff
+            user: '/users/student', // Update with the actual route path for student
+          };
+
+          const userType = data.user.user_role.toLowerCase();
+          navigate(routesByUserType[userType]); // Use navigate to redirect
         } else {
           setError('Invalid credentials');
         }
@@ -42,11 +54,6 @@ function Login() {
       console.error('Login error:', error);
       setError('Failed to log in');
     }
-  };
-
-  // If the user is already authenticated, redirect them to the homepage
-  if (isAuthenticated) {
-    return <Navigate to="/newsmanagement" />;
   }
 
   return (
