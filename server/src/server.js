@@ -10,10 +10,11 @@ const userRoutes = require('./routes/userRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const newsRoutes = require('./routes/newsRoutes');
 
-app.use('/', userRoutes);
+app.use('/api', userRoutes);
 app.use('/api', eventRoutes);
 app.use('/api', newsRoutes);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
+

@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 
-router.post('/api/login', (req, res) => {
+router.post('/login', (req, res) => {
     const { user_name, user_password } = req.body;
     connection.query(
       'SELECT * FROM users WHERE user_name = ?',
@@ -43,7 +43,7 @@ router.post('/api/login', (req, res) => {
     );
   });
   
- router.post('/api/register', async (req, res) => {
+ router.post('/register', async (req, res) => {
     const { user_name, user_password, user_role } = req.body;
   
     try {

@@ -12,8 +12,6 @@ CREATE TABLE events (
     created_at TEXT NOT NULL
 );
 
-
-
 CREATE TABLE news (
     news_id INT AUTO_INCREMENT PRIMARY KEY,
     news_title TEXT NOT NULL,

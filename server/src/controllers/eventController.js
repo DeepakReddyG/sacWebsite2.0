@@ -1,8 +1,13 @@
+const connection = require('../config/db');
 const express = require('express');
 const router = express.Router();
+const app = express();
+const cors = require('cors');
+app.use(express.json());
+app.use(cors());
 
 
-router.post('/api/addEvent', (req, res) => {
+router.post('/addEvent', (req, res) => {
     const eventData = req.body; 
   
     connection.query(
@@ -30,8 +35,8 @@ router.post('/api/addEvent', (req, res) => {
     );
   });
   
-  
-  router.get('/api/getevents', (req, res) => {
+
+  router.get('/getevents', (req, res) => {
     connection.query('SELECT * FROM events', (err, results) => {
       if (err) {
         console.error('Error fetching events:', err);
@@ -41,6 +46,7 @@ router.post('/api/addEvent', (req, res) => {
       }
     });
   });
+  
   
 
   module.exports = router;
