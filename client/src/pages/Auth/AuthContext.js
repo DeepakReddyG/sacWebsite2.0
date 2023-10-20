@@ -1,4 +1,3 @@
-// AuthContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext();
@@ -8,48 +7,47 @@ export const useAuth = () => {
 };
 
 export const AuthProvider = ({ children }) => {
-  const userDataFromStorage = localStorage.getItem('user');
-  let sessionTimeout; // Variable to hold the session timeout
+  let sessionTimeout;
 
-  let initialUser = null;
-  let initialIsAuthenticated = false;
-
-  if (userDataFromStorage) {
-    try {
-      initialUser = JSON.parse(userDataFromStorage);
-      initialIsAuthenticated = true;
-    } catch (error) {
-      console.error('Error parsing user data:', error);
-    }
-  }
-
-  const [user, setUser] = useState(initialUser);
-  const [isAuthenticated, setIsAuthenticated] = useState(initialIsAuthenticated);
+  const [user, setUser] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const login = (userData) => {
     setUser(userData);
     setIsAuthenticated(true);
-    // localStorage.setItem('user', JSON.stringify(userData));
-    // localStorage.setItem('userToken', userData.token);
-    // sessionStorage.setItem('user', JSON.stringify(userData));
-    // sessionStorage.setItem('userToken', userData.token);
-    
+    localStorage.setItem('user', JSON.stringify(userData));
+    localStorage.setItem('isAuthenticated', 'true');
+    sessionStorage.setItem('user', JSON.stringify(userData));
+    sessionStorage.setItem('isAuthenticated', 'true');
+    sessionStorage.setItem('username', userData.user_name);
+    sessionStorage.setItem('user_role', userData.user_role);
+    localStorage.setItem('isAuthenticated', 'true');
+    localStorage.setItem('username', userData.user_name);
+    localStorage.setItem('user_role', userData.user_role);
+
     sessionTimeout = setTimeout(() => {
       logout();
-    }, 30 * 60 * 1000); 
+    }, 30 * 60 * 1000);
   };
 
   const logout = () => {
     setUser(null);
     setIsAuthenticated(false);
-    localStorage.removeItem('user');
-    localStorage.removeItem('userToken');
-    sessionStorage.removeItem('user');
-    sessionStorage.removeItem('userToken');
-    clearTimeout(sessionTimeout); // Clear the session timeout
-    sessionStorage.clear();
     localStorage.clear();
+    sessionStorage.clear();
+    clearTimeout(sessionTimeout);
   };
+
+  useEffect(() => {
+    // Check if the user is already authenticated in localStorage on component mount
+    const storedUser = localStorage.getItem('user');
+    const isAuthenticatedFromStorage = localStorage.getItem('isAuthenticated');
+
+    if (storedUser && isAuthenticatedFromStorage === 'true') {
+      setUser(JSON.parse(storedUser));
+      setIsAuthenticated(true);
+    }
+  }, []);
 
   useEffect(() => {
     return () => {
@@ -58,6 +56,9 @@ export const AuthProvider = ({ children }) => {
       }
     };
   }, []);
+
+  // console.log("authentication state: ", isAuthenticated);
+  // console.log("user: ", user);
 
   return (
     <AuthContext.Provider value={{ user, login, logout, isAuthenticated }}>

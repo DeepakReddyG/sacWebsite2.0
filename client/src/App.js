@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { Navigate } from 'react-router-dom';
+
+import { AuthProvider } from "../src/pages/Auth/AuthContext";
 
 import "./App.css";
-
-//import components here
 
 //import pages here
 import Home from "../src/pages/Home/Home";
@@ -89,7 +88,7 @@ function App() {
     { path: "/departmentwise", element: <DepartmentWise/>},
     { path: "/addevent", element: <AddEvent/>},
     { path: "/getevents", element: <GetEvents/>},
-    {path: '/addnews', element: <AddNews/>},
+    { path: '/addnews', element: <AddNews/>},
     { path: "/getnews", element: <GetNews/>},
     { path: "/login", element: <Login/>},
     { path: "/register", element: <Register/>},
@@ -98,7 +97,6 @@ function App() {
     { path: "/users/*", element: <UsersApp />}
     
   ];
-
 
 
   return (

@@ -28,7 +28,7 @@ router.post('/login', (req, res) => {
                 const token = jwt.sign(
                   { user_id: user.user_id, user_name: user.user_name, user_role: user.user_role },
                   secretKey,
-                  { expiresIn: '1m' }
+                  { expiresIn: '1h' }
                 );
                 res.status(200).json({ isAuthenticated: true, token, user });
               } else {
