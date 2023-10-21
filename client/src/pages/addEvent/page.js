@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { useAuth } from '../Auth/AuthContext';
 import SubmissionStatus from './submissionStatus'; // Import the SubmissionStatus component
 
 class AddEventForm extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
