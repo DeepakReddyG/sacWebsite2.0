@@ -2,34 +2,38 @@ import React, { useState, useEffect } from 'react';
 import './Home.css'; 
 import './MobileView.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import ScrollToTop from "react-scroll-to-top";
 import { Link as Scroll } from 'react-scroll';
 import 'add-to-calendar-button';
 
+//components
 import NavBar from '../../components/Navigation/Page';
+import Footer from '../../components/Footer/Footer';
 import ToggleNav from '../../components/Navigation/ToggleNav';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-// dialogue box start here 
 
+//pages
+import Events from '../addEvent/getEvents';
+
+// dialogue box start here 
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 
-
+//swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 
-
-import Footer from '../../components/Footer/Footer';
+//assets
 import newVideo from '../../Assets/newVideo.mp4';  
 import storiesImage from '../../Assets/storiesImage.jpeg';
 import YtLogo from '../../Assets/Logos/YtLogo.png';
@@ -37,12 +41,10 @@ import InstaLogo from '../../Assets/Logos/InstaLogo.png';
 import TwitterLogo from '../../Assets/Logos/TwitterLogo.png';
 import LinkedInLogo from '../../Assets/Logos/LinkedInLogo.png';
 import Director from '../../Assets/director.png'
-
 import Technology from '../../Assets/Technology.png';
 import Liberal from '../../Assets/Liberal.png';
 import Innovation from '../../Assets/Innovation.png';
 import Outreach from '../../Assets/Outreach.png';
-
 import NewsOne from '../../Assets/NewsImages/NewsImageOne.png';
 import NewsTwo from '../../Assets/NewsTwo.png';
 import NewsThree from '../../Assets/NewsThree.png';
@@ -52,8 +54,6 @@ import SHSTwo from '../../Assets/SwachhataHiSeva/SHSImages/SHSTwo.png';
 import SHSThree from '../../Assets/SwachhataHiSeva/SHSImages/SHSThree.png';
 import SHSFour from '../../Assets/SwachhataHiSeva/SHSImages/SHSFour.png';
 import SHSFive from '../../Assets/SwachhataHiSeva/SHSImages/SHSFive.png';
-
-// upcoming events
 import EventOne from '../../Assets/UpcomingEvents/UpcomingEvent1.png';
 import EventTwo from '../../Assets/UpcomingEvents/UpcomingEvent2.png';
 import EventThree from '../../Assets/UpcomingEvents/UpcomingEvent3.png';
@@ -198,8 +198,6 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
                
           <ScrollToTop  smooth id='scrollToTop' component={<p style={{ color: "rgb(151, 0, 3)" }}>Back to top</p>}></ScrollToTop>
-
-
 
         <div className="Home-two">
           <div className="Home-two-in">
@@ -585,110 +583,7 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
 
       {/*  -------------------- upcoming events ---------------------- */}
-
-      <div className="upcoming-events">
-        <div className="upcoming-events-header">
-          <div className="upcoming-events-header-in">
-            <h1>Upcoming Events</h1>
-          </div>
-        </div>
-        <div className="upcoming-events-in">
-        <div className="ue-comps">
-              <div className="ue-comps-in">
-                <div className="ue-comps-in-one">
-                    <img src={EventOne} alt="" />
-                </div>
-                <div className="ue-comps-in-two">
-                <div className="ue-comps-in-two-in">
-                  <h2>Strings in Java</h2>
-                  <p>10th October, 2023</p>
-                </div>
-                  <div className="ue-comps-in-two-in-in">
-                  <add-to-calendar-button
-                        name="Strings in Java"
-                        startDate="2022-10-10"
-                        options="['Google']"
-                      >
-                    </add-to-calendar-button>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div className="ue-comps">
-              <div className="ue-comps-in">
-                <div className="ue-comps-in-one">
-                    <img src={EventTwo} alt="" />
-                </div>
-                <div className="ue-comps-in-two">
-                <div className="ue-comps-in-two-in">
-                  <h2>Python Flask</h2>
-                  <p>10th October, 2023</p>
-                </div>
-                  <div className="ue-comps-in-two-in-in">
-                  <add-to-calendar-button
-                        name="Python Flask"
-                        startDate="2022-10-10"
-                        options="['Google']"
-                      >
-                    </add-to-calendar-button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="ue-comps">
-              <div className="ue-comps-in">
-                <div className="ue-comps-in-one">
-                    <img src={EventThree} alt="" />
-                </div>
-                <div className="ue-comps-in-two">
-
-                <div className="ue-comps-in-two-in">
-                  <h2>Version Control</h2>
-                  <p>10th October, 2023</p>
-                </div>
-                  <div className="ue-comps-in-two-in-in">
-                  <add-to-calendar-button
-                        name="Version Control"
-                        startDate="2022-10-10"
-                        options="['Google']"
-                      >
-                    </add-to-calendar-button>
-                  </div>
- 
-                </div>
-              </div>
-            </div>
-            <div className="ue-comps">
-              <div className="ue-comps-in">
-                <div className="ue-comps-in-one">
-                    <img src={EventFour} alt="" />
-                    
-                </div>
-                <div className="ue-comps-in-two">
-                  <div className="ue-comps-in-two-in">
-                    <h2>Power Automate</h2>
-                    <p>10th October, 2023</p>
-                  </div>
-                  <div className="ue-comps-in-two-in-in">
-                    <add-to-calendar-button
-                        name="Power Automate"
-                        startDate="2022-10-10"
-                        options="['Google']"
-                      >
-                    </add-to-calendar-button>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-        </div>
-        <div className="explore-events">
-          <Link onClick={handleclick} to='/sil' className='explore-events-link'>Explore More Events</Link>
-        </div>
-      </div>
+      <Events/>
 
 
 

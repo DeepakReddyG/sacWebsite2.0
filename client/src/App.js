@@ -9,7 +9,7 @@ import "./App.css";
 import Home from "../src/pages/Home/Home";
 import Leadership from "../src/pages/Leadership/Page";
 import ClubsPage from "../../client/src/ClubPages/ClubPageApp";
-import Events from "./pages/Events/Event";
+import Events from "./pages/addEvent/eventsApp";
 import Gallery from "./pages/Gallery/Gallery";
 import Blogs from "./pages/Blogs/BlogOne";
 import Terms from "./pages/TC/Tc";
@@ -71,7 +71,7 @@ function App() {
     { path: "/leadership", element: <Leadership /> },
     { path: "/dashboard/*", element: <Dashboard /> },
     { path: "/completedevents", element: <CompletedEvents /> },
-    { path: "/events", element: <Events /> },
+    { path: "/events/*", element: <Events /> },
     { path: "/terms", element: <Terms /> },
     { path: "/gallery", element: <Gallery /> },
     { path: "/blogs", element: <Blogs /> },

@@ -5,7 +5,7 @@ import './Login.css';
 
 function Login() {
   const { login, isAuthenticated } = useAuth();
-  const [credentials, setCredentials] = useState({ user_name: '', user_password: '' });
+  const [credentials, setCredentials] = useState({ user_name: '', user_password: '', user_role: '' });
   const [error, setError] = useState();
   const navigate = useNavigate();
 

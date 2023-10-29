@@ -39,7 +39,6 @@ export const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    // Check if the user is already authenticated in localStorage on component mount
     const storedUser = localStorage.getItem('user');
     const isAuthenticatedFromStorage = localStorage.getItem('isAuthenticated');
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import './page.css';
+import { Link } from 'react-router-dom';
 
 const EventCard = ({ event }) => {
   return (
@@ -15,7 +16,8 @@ const EventCard = ({ event }) => {
                         </div>
                         <div className="event-card-two-two">
                             <p>Date: {event.event_date}</p>
-                            <p>Venue: {event.event_venue}</p>
+                            <a href={event.event_registration}>Register for Event</a>
+
                         </div>
                     </div>
                 </div>
