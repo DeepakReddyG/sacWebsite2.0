@@ -1,0 +1,16 @@
+.adminoptionsmain {
+    display: flex;
+}
+
+.adminoption {
+    border: 2px solid grey;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    width: fit-content;
+    margin: 1rem 1rem;
+}
+
+.adminoption-link {
+    color: black;
+    text-decoration: none;
+}

@@ -41,5 +41,53 @@ router.post('/addNews', (req, res) => {
       }
     });
   });
+
+  // Update an existing news article
+router.put('/updateNews/:id', (req, res) => {
+  const newsId = req.params.id;
+  const { news_title, news_description, news_image } = req.body;
+
+  if (!news_title || !news_description || !news_image) {
+    return res.status(400).json({ error: 'Missing required data for news article update' });
+  }
+
+  const updateQuery = `
+    UPDATE news
+    SET news_title = ?, news_description = ?, news_image = ?
+    WHERE news_id = ?
+  `;
+
+  const values = [news_title, news_description, news_image, newsId];
+
+  connection.query(updateQuery, values, (err, results) => {
+    if (err) {
+      console.error('Error updating news article:', err);
+      return res.status(500).json({ error: 'Error updating news article' });
+    }
+
+    res.json({ success: true, message: 'News article updated successfully' });
+  });
+});
+
+// Delete a news article
+router.delete('/deleteNews/:id', (req, res) => {
+  const newsId = req.params.id;
+
+  const deleteQuery = `
+    DELETE FROM news
+    WHERE news_id = ?
+  `;
+
+  connection.query(deleteQuery, [newsId], (err, results) => {
+    if (err) {
+      console.error('Error deleting news article:', err);
+      return res.status(500).json({ error: 'Error deleting news article' });
+    }
+
+    res.json({ success: true, message: 'News article deleted successfully' });
+  });
+});
+
+
   
   module.exports = router;

@@ -34,6 +34,8 @@ import AddNews from '../src/pages/News/AddNewsForm';
 import GetNews from '../src/pages/News/NewsList';
 import NewsManagement from '../src/pages/News/NewsManagement';
 
+import NewsApp from '../src/pages/NewsManagement/newsApp';
+
 
 import UsersApp from '../src/pages/Users/UsersApp';
 
@@ -72,6 +74,7 @@ function App() {
     { path: "/dashboard/*", element: <Dashboard /> },
     { path: "/completedevents", element: <CompletedEvents /> },
     { path: "/events/*", element: <Events /> },
+    { path: "/news/*", element: <NewsApp /> },
     { path: "/terms", element: <Terms /> },
     { path: "/gallery", element: <Gallery /> },
     { path: "/blogs", element: <Blogs /> },

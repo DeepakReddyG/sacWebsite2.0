@@ -5,13 +5,12 @@ class EventTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      events: [], // To store the list of events
-      editEventId: null, // To track the event being edited
+      events: [],
+      editEventId: null,
     };
   }
 
   componentDidMount() {
-    // Fetch the list of events from the server when the component mounts
     this.fetchEvents();
   }
 
@@ -108,7 +107,8 @@ class EventTable extends Component {
                 <td>{event.event_venue}</td>
                 <td>{event.event_category}</td>
                 <td>
-                  <button onClick={() => this.handleEditClick(event.event_id)}>Edit</button>
+                  {/* make the background color of buttons as green */}
+                  <button  onClick={() => this.handleEditClick(event.event_id)} >Update</button>
                   <button onClick={() => this.handleDelete(event.event_id)}>Delete</button>
                 </td>
               </tr>
