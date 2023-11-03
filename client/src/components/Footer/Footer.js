@@ -58,7 +58,7 @@ const Footer = () => {
             <div className="FooterThree">
               <div className="FooterThree-one">
                 <span id='copyright'>
-                  <i class="fa fa-copyright" aria-hidden="true"></i> <p>2023 KLEF - Student Activity Center | Designed & Developed by <a href="https://www.linkedin.com/in/deepakreddygathpa/">Deepak Reddy Gathpa</a> & <a href="https://www.linkedin.com/in/tadikondasaimanikanta/">Tadikonda Sai Manikanta</a>
+                  <i class="fa fa-copyright" aria-hidden="true"></i> <p>2023 KLEF - Student Activity Center | Designed & Developed by <a href="https://www.linkedin.com/in/deepakreddygathpa/">Pavan Karthik</a> & <a href="https://www.linkedin.com/in/tadikondasaimanikanta/">Tadikonda Sai Manikanta</a>
                   </p>
                 </span>
               </div>

@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './Home.css'; 
 import './MobileView.css';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import ScrollToTop from "react-scroll-to-top";
 import { Link as Scroll } from 'react-scroll';
 import 'add-to-calendar-button';
 
-//components
 import NavBar from '../../components/Navigation/Page';
 import Footer from '../../components/Footer/Footer';
 import ToggleNav from '../../components/Navigation/ToggleNav';
@@ -18,6 +16,7 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 //pages
 import Events from '../addEvent/getEvents';
+import News from '../NewsManagement/NewsIndex';
 
 // dialogue box start here 
 import Button from '@mui/material/Button';
@@ -54,10 +53,6 @@ import SHSTwo from '../../Assets/SwachhataHiSeva/SHSImages/SHSTwo.png';
 import SHSThree from '../../Assets/SwachhataHiSeva/SHSImages/SHSThree.png';
 import SHSFour from '../../Assets/SwachhataHiSeva/SHSImages/SHSFour.png';
 import SHSFive from '../../Assets/SwachhataHiSeva/SHSImages/SHSFive.png';
-import EventOne from '../../Assets/UpcomingEvents/UpcomingEvent1.png';
-import EventTwo from '../../Assets/UpcomingEvents/UpcomingEvent2.png';
-import EventThree from '../../Assets/UpcomingEvents/UpcomingEvent3.png';
-import EventFour from '../../Assets/UpcomingEvents/UpcomingEvent4.png';
 
 
 
@@ -524,61 +519,9 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
          </div>
         </div>
 
-
-
-      <div className="news">
-        <div className="news-header">
-          <div className="news-header-in">
-            <h1>News from the Community</h1>
-          </div>
-        </div>
-        <div className="news-in">
-          <div className="news-main">
-            <div className="news-one">
-                <div className="news-one-in">
-                  <img src={NewsOne} alt="" />
-                  <div className="news-one-in-desc">
-                    <p>Code for Cause Hackathon</p>
-                    <p>A hackathon that empowers your code to change the world. Join us in using technology for social good and make an impact through your coding expertise!</p>
-                    <p>18th and 19th October 2023</p>
-                  </div>
-                </div>
-            </div>
-            <div className="news-one">
-                <div className="news-one-in">
-                  <img src={NewsThree} alt="" />
-                  <div className="news-one-in-desc">
-                    <p>Student Council Meeting</p>
-                    <p>A diverse blend of students, spanning different academic disciplines, convenes to enhance the student community and evaluate ongoing progress.</p>
-                    <p>September 8th 2023</p>
-                  </div>
-                </div>
-            </div>
-            <div className="news-one">
-                <div className="news-one-in">
-                  <img src={NewsTwo} alt="" />
-                  <div className="news-one-in-desc">
-                    <p>SAC Photography Club's Debut</p>
-                    <p>Photography Club has made its mark with 'Hukum,' a cover of 'Jailer.' The YouTube sensation has garnered a staggering 15k views!</p>
-                    <p>13th September 2023</p>
-                  </div>
-                </div>
-            </div>
-            <div className="news-one">
-                <div className="news-one-in">
-                  <img src={NewsFour} alt="" />
-                  <div className="news-one-in-desc">
-                    <p>SAC Premier League Showdown:</p>
-                    <p>Today's match features the epic clash between the CSE Wizards and the CSE Honours Cyber Blasters in the SAC Premier League. Get ready for the excitement!</p>
-                    <p>23rd September 2023</p>
-                  </div>
-                </div>
-            </div>
-           
-            
-          </div>
-        </div>
-      </div>
+      
+      {/* --------------------- news --------------------------- */}
+      <News/>
 
 
 

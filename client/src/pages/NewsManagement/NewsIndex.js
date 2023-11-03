@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import NewsCard from './NewsCard';
 import { Link } from 'react-router-dom';
 
+import './NewsIndex.css';
+
 class NewsPage extends Component {
   constructor(props) {
     super(props);
