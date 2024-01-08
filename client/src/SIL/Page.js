@@ -87,7 +87,7 @@ const Page = () => {
       <div className="SILContainer">
         <div className="sil-header">
           <div className="sil-header-in">
-            <h1>Social Immersive Learning through Student Activity Center</h1>
+            <h1>Social Immersive Learning</h1>
             <p>The Student Activity Center is <mark>duly authorized to facilitate activities associated with the Social Immersive Learning Course</mark>. The following is a comprehensive list of activities that the Student Activity Center (SAC) organizes, scheduled on the dates specified, in collaboration with the diverse clubs operating within SAC.</p>
           </div>
         </div>
