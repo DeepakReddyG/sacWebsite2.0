@@ -47,7 +47,7 @@ import NewsOne from '../../Assets/NewsImages/NewsImageOne.png';
 import NewsTwo from '../../Assets/NewsTwo.png';
 import NewsThree from '../../Assets/NewsThree.png';
 import NewsFour from '../../Assets/NewsFour.png';
-import chairman from '../../Assets/chairman.png';
+// import chairman from '../../Assets/chairman.png';
 import SHSTwo from '../../Assets/SwachhataHiSeva/SHSImages/SHSTwo.png';
 import SHSThree from '../../Assets/SwachhataHiSeva/SHSImages/SHSThree.png';
 import SHSFour from '../../Assets/SwachhataHiSeva/SHSImages/SHSFour.png';
@@ -203,48 +203,52 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
         <div className="Home-two">
           <div className="Home-two-in">
-            <h1>KLSAC for <span>Garbage</span><span>Free</span><span>India</span></h1>
+            <h1>Activies <span>Via</span><span> </span><span>SAC</span></h1>
             <Link className='hti-link' to='/swachhatahiseva'>View KLSAC's Activities</Link>
           </div>
         </div>
-
         <Swiper
-        spaceBetween={0}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={false}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <div className="shs-swiper-module">
-            <img src={SHSTwo} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="shs-swiper-module">
-            <img src={SHSThree} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="shs-swiper-module">
-            <img src={SHSFour} alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="shs-swiper-module">
-            <img src={SHSFive} alt="" />
-          </div>
-        </SwiperSlide>
+      spaceBetween={0}
+      centeredSlides={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={{
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="mySwiper"
+    >
+      <SwiperSlide>
+        <div className="shs-swiper-module">
+          <img src={SHSTwo} alt="" />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="shs-swiper-module">
+          <img src={SHSThree} alt="" />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="shs-swiper-module">
+          <img src={SHSFour} alt="" />
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="shs-swiper-module">
+          <img src={SHSFive} alt="" />
+        </div>
+      </SwiperSlide>
 
-      </Swiper>
-
+      {/* Navigation Controls */}
+      <div className="swiper-button-next"></div>
+      <div className="swiper-button-prev"></div>
+    </Swiper>
         
         
 
@@ -541,8 +545,8 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                 <div className="news-one-in">
                   <img src={NewsOne} alt="" />
                   <div className="news-one-in-desc">
-                    <p>Code for Cause Hackathon</p>
-                    <p>A hackathon that empowers your code to change the world. Join us in using technology for social good and make an impact through your coding expertise!</p>
+                    <p>Smart Village Revolution</p>
+                    <p>K L Deemed to be University emphasizes rural development through social and cultural initiatives, alongside community mobilization.</p>
                     <p>18th and 19th October 2023</p>
                   </div>
                 </div>
@@ -601,8 +605,8 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                 </div>
                 <div className="ue-comps-in-two">
                 <div className="ue-comps-in-two-in">
-                  <h2>Strings in Java</h2>
-                  <p>10th October, 2023</p>
+                  <h2>Jira Fundamentals</h2>
+                  <p>10th January, 2024</p>
                 </div>
                   <div className="ue-comps-in-two-in-in">
                   <add-to-calendar-button
@@ -623,8 +627,8 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                 </div>
                 <div className="ue-comps-in-two">
                 <div className="ue-comps-in-two-in">
-                  <h2>Python Flask</h2>
-                  <p>10th October, 2023</p>
+                  <h2>PHP CRUD Operations</h2>
+                  <p>9th January, 2024</p>
                 </div>
                   <div className="ue-comps-in-two-in-in">
                   <add-to-calendar-button
@@ -646,8 +650,8 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                 <div className="ue-comps-in-two">
 
                 <div className="ue-comps-in-two-in">
-                  <h2>Version Control</h2>
-                  <p>10th October, 2023</p>
+                  <h2>JavaScript Session 01</h2>
+                  <p>13th January, 2024</p>
                 </div>
                   <div className="ue-comps-in-two-in-in">
                   <add-to-calendar-button
@@ -669,8 +673,8 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                 </div>
                 <div className="ue-comps-in-two">
                   <div className="ue-comps-in-two-in">
-                    <h2>Power Automate</h2>
-                    <p>10th October, 2023</p>
+                    <h2>NGINX for beginners</h2>
+                    <p>11th January, 2024</p>
                   </div>
                   <div className="ue-comps-in-two-in-in">
                     <add-to-calendar-button
@@ -728,12 +732,12 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                         <p>Director, SAC</p>
                         <p>director_sac@kluniversity.in</p>
                     </div>
-                    <div className="profile-card">
+                    {/* <div className="profile-card">
                         <img src={chairman} alt="" />
                         <h2>Parth Deepak Thakker</h2>
                         <p>Chairman, Student Council</p>
                         <p>ECE, 4th Year</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
           </div>
@@ -759,7 +763,7 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                         </div>
                         <div className="follow-comps-two">
                           <h1>YouTube</h1>
-                          <p>Subscribe to join a community of creative developers and learn the latest in Google technology.</p>
+                          <p>Subscribe to our YouTube channel for engaging videos and insightful content. Stay updated with our latest uploads and join our community!</p>
                         </div>
                         <div className="follow-comps-three">
                           <a href="https://www.youtube.com/@studentactivitycenter_klu">Learn More</a>
@@ -775,7 +779,7 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                         </div>
                         <div className="follow-comps-two">
                           <h1>Instagram</h1>
-                          <p>Subscribe to join a community of creative developers and learn the latest in Google technology.</p>
+                          <p>Explore our visual journey on Instagram! Follow us for behind-the-scenes moments, stunning visuals, and a glimpse into our vibrant community.</p>
                         </div>
                         <div className="follow-comps-three">
                           <a href='https://www.instagram.com/klu_sac/'>Learn More</a>
@@ -791,7 +795,7 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                         </div>
                         <div className="follow-comps-two">
                           <h1>LinkedIn</h1>
-                          <p>Subscribe to join a community of creative developers and learn the latest in Google technology.</p>
+                          <p>Connect with us on LinkedIn for professional insights, career updates, and networking opportunities. Join our LinkedIn community to stay informed and engaged.</p>
                         </div>
                         <div className="follow-comps-three">
                           <a href="https://www.linkedin.com/in/klu-sac/">Learn More</a>
@@ -807,7 +811,7 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                         </div>
                         <div className="follow-comps-two">
                           <h1>X - Twitter</h1>
-                          <p>Subscribe to join a community of creative developers and learn the latest in Google technology.</p>
+                          <p>Follow our specialized Twitter account for exclusive content and focused discussions. Dive deeper into specific topics and join the conversation with like-minded individuals</p>
                         </div>
                         <div className="follow-comps-three">
                           <a href="https://twitter.com/klsac_vja">Learn More</a>
@@ -860,11 +864,11 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                                    <Link   onClick={handleclick} to='/clubs/aeroelectricclub' className='qu-link-cm'>AeroElectric Club</Link>
                                    <Link   onClick={handleclick} to='/clubs/cyberclub' className='qu-link-cm'>Cyber Security Club </Link>
                                    <Link   onClick={handleclick} to='/clubs/WebAppsClub' className='qu-link-cm'>WebApps Club </Link>
-                                   <Link   onClick={handleclick} to='/clubs/TechHumaClub' className='qu-link-cm'>TechHuma Club </Link>
+                                    <Link   onClick={handleclick} to='/clubs/TechHumaClub' className='qu-link-cm'>Crypto Club </Link>
                                    <Link   onClick={handleclick} to='/clubs/AnimationClub' className='qu-link-cm'>Animation and Designing Club </Link>
                                    <Link   onClick={handleclick} to='/clubs/AutomobileClub' className='qu-link-cm'>Automobile Club </Link>
                                    <Link   onClick={handleclick} to='/clubs/AgricultureClub' className='qu-link-cm'>Agriculture Club </Link>
-                                   <Link   onClick={handleclick} to='/clubs/MobileESportsClub' className='qu-link-cm'>MobileESports Club </Link>
+                                   {/* <Link   onClick={handleclick} to='/clubs/MobileESportsClub' className='qu-link-cm'>MobileESports Club </Link> */}
 
                               </div>
 
@@ -872,11 +876,11 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                                   <h1>Liberal Arts</h1>
 
                                     <Link   onClick={handleclick} to='/clubs/StandupComedyClub' className='qu-link-cm'>Standup Comedy Club</Link>
-                                    <Link   onClick={handleclick} to='/clubs/SwaraClub' className='qu-link-cm'>Music Club (Swara)</Link>
+                                    <Link   onClick={handleclick} to='/clubs/SwaraClub' className='qu-link-cm'>Swara Club (Music)</Link>
                                     <Link   onClick={handleclick} to='/clubs/SwaraClub' className='qu-link-cm'>Photography Club</Link>
                                     <Link   onClick={handleclick} to='/clubs/SwaraClub' className='qu-link-cm'>Film Making Club</Link>
-                                    <Link   onClick={handleclick} to='/clubs/FusionClub' className='qu-link-cm'>Dance Club (Fusion)</Link>
-                                    <Link   onClick={handleclick} to='/clubs/FusionClub' className='qu-link-cm'>Dance Club (Narthana)</Link>
+                                    <Link   onClick={handleclick} to='/clubs/FusionClub' className='qu-link-cm'>Fusion Club (Dance)</Link>
+                                    <Link   onClick={handleclick} to='/clubs/FusionClub' className='qu-link-cm'>Narthana Club (Dance)</Link>
                                     <Link   onClick={handleclick} to='/clubs/VachasClub' className='qu-link-cm'>Literature Club (Vachas)</Link>
                                     <Link   onClick={handleclick} to='/clubs/VachasClub' className='qu-link-cm'>Script Writing Club (Versatales)</Link>
                                     <Link   onClick={handleclick} to='/clubs/FusionClub' className='qu-link-cm'>Fusion Club</Link>
@@ -911,12 +915,12 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                                  
                                 </div>
                             </div>
-                            <div className="quick-link-two">
+                            {/* <div className="quick-link-two">
                               <div className="quick-link-two-one">
                                 <h1>Quick Links for Activities at SAC</h1>
                                   <Link   onClick={handleclick} className='quick-more' to='/clubs' >DeepDive <OpenInNewIcon /> </Link>
                                 </div>
-                            </div>
+                            </div> */}
                           </div>
                     </div>
 

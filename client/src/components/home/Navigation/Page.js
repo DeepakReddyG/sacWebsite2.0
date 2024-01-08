@@ -41,7 +41,9 @@ const Page = () => {
 
   const [open, setOpen] = React.useState(false);
 
-  
+    const handleSVRClick = () => {
+      window.location.href = 'https://sac-svr.vercel.app/';
+    };
 
   const handleClose = () => {
     setOpen(false);
@@ -70,6 +72,7 @@ const Page = () => {
                     {/* <li><Scroll className='nav-scroll-links' activeClass="active" to="faq" spy ={true} smooth={true} offset={-60} duration={200} >SIL</Scroll></li> */}
                     {/* <li><Link onClick={handleclick} className='nav-links' to='/completedevents'>Reports</Link></li> */}
                     <li><Link onClick={handleclick} className='nav-links' to='/sil'>Activities</Link></li>
+                    <li><Link onClick={handleSVRClick} className='nav-links' to='/sil'>SVR</Link></li>
                     {/* <li><Scroll className='nav-scroll-links' activeClass="active" to="" spy ={true} smooth={true} offset={-50} duration={200} onClick={handleClickOpen}>Notifications</Scroll></li> */}
                   </ul>
                 </div>

@@ -138,6 +138,9 @@
 }
 .explore-sac-scroll {
     color: white;
+    &:hover{
+        cursor: pointer;
+    }
 }
   
 .centered-text {
@@ -294,6 +297,17 @@
 .projects-comps-one img {
     width: 100%;
 }
+.projects-comps-one{
+    &:hover{
+        opacity: 0.5;
+        cursor: pointer;
+    }
+}
+.projects-comps-two-links{
+    &:hover{
+        cursor: pointer;
+    }
+}
 
 .projects-comps-two {
     display: flex;
@@ -337,6 +351,9 @@
     border-radius: 0.5rem;
     background-color: rgb(151, 0, 3);
     color: white;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 
@@ -894,12 +911,58 @@
 }
 .news-one-in {
     position: relative;
+    
 }
 .news-one-in img {
     width: 100%;
     height: auto;
     display: block;
 }
+/* Add your other styles as needed */
+
+.mySwiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .shs-swiper-module {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shs-swiper-module img {
+    width: 90%;
+    height: auto;
+    display: block;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .swiper-button-next {
+    right: 10px;
+  }
+  
+  .swiper-button-prev {
+    left: 10px;
+  }
+  
+  /* Optional: Add hover effects to the navigation controls */
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+   color: rgb(151, 0, 3);
+  }
+  
+
 
 .news-one-in-desc {
     position: absolute;
@@ -911,6 +974,7 @@
     width: 100%;
     box-sizing: border-box;
     text-align: left;
+   
 }
 .news-one-in-desc p:nth-child(1) {
     font-size: 1rem;
@@ -1285,10 +1349,13 @@
     display: flex;
     justify-content: space-around;
 }
+.follow-comps-two{
+    height:40vh;
+}
 
  .profile-card {
     background-color: #fff;
-    max-width: 47%;
+    max-width: 57%;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
