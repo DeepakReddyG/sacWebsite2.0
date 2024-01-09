@@ -2,6 +2,8 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Gallery.css';
+// import zeroone1 from '../../Assets/Gallery/zeroone1.jpg'
+
 
 import Footer from '../../components/home/Footer/Footer';
 import NavBar from './NavBar';
@@ -9,8 +11,8 @@ import '../../components/home/HomeNav/HomeNav.css';
 
 const images = [
   {
-    src: 'https://picsum.photos/350/250?image=444',
-    title: 'Library',
+    src: 'https://picsum.photos/350/250/?image=232',
+    title: 'ZeroOne',
     category: 'Architect Design',
   },
   {
