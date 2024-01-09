@@ -1,0 +1,144 @@
+.FooterComponent {
+    background-color: rgb(151, 0, 3);
+    padding-top: 20px;
+    border-top: 5px solid rgb(225, 223, 223);
+    position: absolute;
+    width: 100%;
+}
+
+
+.FooterOne {
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.FooterOne .privacy {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    margin-right: 20px;
+}
+.FooterOne .report {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    margin-right: 20px;
+    float: right;
+}
+
+.FooterTwo {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    padding: 1.7rem 0rem;
+}
+.FooterTwo-one {
+    width: 50%;
+    text-align: left;   
+}
+
+.FooterTwo-one h3 {
+    font-size: 1.2rem;
+    color: whitesmoke;
+}
+.FooterTwo-one h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: whitesmoke;
+    width: 90%;
+    margin-top: 1rem;
+    
+}
+
+.FooterTwo-two {
+    width: 50%;
+    text-align: left;
+}
+.FooterTwo-two h5 {
+    color: whitesmoke;
+}
+.Footer-two-inner {
+    width: 85%;
+    color: whitesmoke;
+    display: flex;
+}
+.contact {
+    width: 85%;
+    color: whitesmoke;
+    display: flex; 
+    padding: 1rem 0rem 0rem 1rem;
+}
+.Footer-two-inner h4 {
+    font-size: 15px;
+}
+
+.official-communication {
+    width:100%;
+    padding: 0rem 1rem;
+}
+.official-communication h4 {
+    width: 100%;
+    font-weight: 400;
+    color: white;
+}
+.official-communication h3 {
+    color: white;
+
+}
+.campus {
+    width:100%;
+    padding: 0rem 1rem;
+}
+.campus h4 {
+    width: 100%;
+    font-weight: 400;
+    color: white;
+}
+.campus h3 {
+    color: white;
+}
+.FooterThree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    padding: 0.7rem 0rem;
+}
+
+.FooterThree-one {
+    width: 80%;
+    text-align: left;
+}
+.FooterThree-one p {
+    display: inline;
+    font-weight: 320;
+    color: white;
+    font-weight: 400;
+}
+.FooterThree-two {
+    width: 20%;
+}
+#copyright {
+    font-size: 15px;
+    color: white;
+}
+#copyright a {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.FooterThree-two i {
+    margin: 0px 15px 0px 15px;
+    color: whitesmoke;
+    font-size: 1.3rem;
+}
+#socialIcons {
+    font-size: 25px;
+}
+

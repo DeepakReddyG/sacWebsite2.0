@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .HomeNavComponent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+} */
+
+.HomeNavComponent {
+    background-color: rgb(151, 0, 3);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.HomeNavContainer {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0rem;
+}
+.HomeNavLogo {
+    width: 40%;
+}
+.HomeNavLogo-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.HomeNavLogo-in-link {
+    color: black;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: white;
+}
+.HomeNavIndex {
+    width: 60%;
+}
+.HomeNavIndex-in {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.HomeNavIndex-in-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}

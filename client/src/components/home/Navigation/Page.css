@@ -1,0 +1,98 @@
+
+.nav {
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+.nav-in {
+    display: flex;
+}
+.nav-in-one {
+    width: 70%;
+
+}
+.nav-in-two {
+    width: 30%;
+}
+.logoini {
+    width: 40%;
+}
+.logoaft {
+    width: 30%;
+}
+.nav-in-two-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-in-two-in h1 {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.nav-in-two-in img {
+    width: 45%;
+    margin-top: 1.5rem;
+}
+.nav-in-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homelink {
+    text-decoration: none;
+    color: white;
+}
+.nav-in-one-in {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-in-one-in ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 1rem 0rem;
+}
+.nav-in-one-in ul li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: white;
+
+}
+.nav-links {
+    color: white;
+    text-decoration: none;
+}
+.nav-scroll-links {
+    color: white;
+}
+.nav-scroll-links:hover {
+    cursor: pointer;
+}
+
+.notification-diag {
+    background-color: white;
+    border: 2px solid rgb(208, 207, 207);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+
+}
+.notification-diag-in {
+    padding: 0.5rem 1rem;
+}
+
+
+.scrolled {
+    background-color: rgb(151, 0, 3); 
+    transition: background-color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.scrolled ul {
+    padding: 0.5rem 0rem;
+    transition: padding 0.2s ease; /* Add a smooth transition effect */
+}
