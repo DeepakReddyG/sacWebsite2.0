@@ -860,58 +860,93 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                             <div className="quick-link-one">
                               <div className="quick-link-one-in">
                                    <h1>Technology</h1>
-                                   <Link   onClick={handleclick} to='/clubs/zeroonecodeclub' className='qu-link-cm'>ZeroOne CodeClub</Link>
-                                   <Link   onClick={handleclick} to='/clubs/aeroelectricclub' className='qu-link-cm'>AeroElectric Club</Link>
-                                   <Link   onClick={handleclick} to='/clubs/cyberclub' className='qu-link-cm'>Cyber Security Club </Link>
-                                   <Link   onClick={handleclick} to='/clubs/WebAppsClub' className='qu-link-cm'>WebApps Club </Link>
-                                    <Link   onClick={handleclick} to='/clubs/TechHumaClub' className='qu-link-cm'>Crypto Club </Link>
-                                   <Link   onClick={handleclick} to='/clubs/AnimationClub' className='qu-link-cm'>Animation and Designing Club </Link>
-                                   <Link   onClick={handleclick} to='/clubs/AutomobileClub' className='qu-link-cm'>Automobile Club </Link>
-                                   <Link   onClick={handleclick} to='/clubs/AgricultureClub' className='qu-link-cm'>Agriculture Club </Link>
+                                   {/* onClick={handleclick} to='/clubs/zeroonecodeclub' */}
+                                   <Link   className='qu-link-cm'>ZeroOne CodeClub</Link>
+                                   {/* onClick={handleclick} to='/clubs/aeroelectricclub' */}
+                                   <Link   className='qu-link-cm'>AeroElectric Club</Link>
+                                   {/* onClick={handleclick} to='/clubs/cyberclub' */}
+                                   <Link  className='qu-link-cm'>Cyber Security Club </Link>
+                                   {/* onClick={handleclick} to='/clubs/WebAppsClub' */}
+                                   <Link   className='qu-link-cm'>WebApps Club </Link>
+                                   {/* onClick={handleclick} to='/clubs/TechHumaClub' */}
+                                    <Link  className='qu-link-cm'>Crypto Club </Link>
+                                    {/* onClick={handleclick} to='/clubs/AnimationClub' */}
+                                   <Link  className='qu-link-cm'>Animation and Designing Club </Link>
+                                   {/* onClick={handleclick} to='/clubs/AutomobileClub' */}
+                                   <Link className='qu-link-cm'>Automobile Club </Link>
+                                   {/* onClick={handleclick} to='/clubs/AgricultureClub'   */}
+                                   <Link   className='qu-link-cm'>Agriculture Club </Link>
                                    {/* <Link   onClick={handleclick} to='/clubs/MobileESportsClub' className='qu-link-cm'>MobileESports Club </Link> */}
 
                               </div>
 
                                 <div className="quick-link-two-in">
                                   <h1>Liberal Arts</h1>
-
-                                    <Link   onClick={handleclick} to='/clubs/StandupComedyClub' className='qu-link-cm'>Standup Comedy Club</Link>
-                                    <Link   onClick={handleclick} to='/clubs/SwaraClub' className='qu-link-cm'>Swara Club (Music)</Link>
-                                    <Link   onClick={handleclick} to='/clubs/SwaraClub' className='qu-link-cm'>Photography Club</Link>
-                                    <Link   onClick={handleclick} to='/clubs/SwaraClub' className='qu-link-cm'>Film Making Club</Link>
-                                    <Link   onClick={handleclick} to='/clubs/FusionClub' className='qu-link-cm'>Fusion Club (Dance)</Link>
-                                    <Link   onClick={handleclick} to='/clubs/FusionClub' className='qu-link-cm'>Narthana Club (Dance)</Link>
-                                    <Link   onClick={handleclick} to='/clubs/VachasClub' className='qu-link-cm'>Literature Club (Vachas)</Link>
-                                    <Link   onClick={handleclick} to='/clubs/VachasClub' className='qu-link-cm'>Script Writing Club (Versatales)</Link>
-                                    <Link   onClick={handleclick} to='/clubs/FusionClub' className='qu-link-cm'>Fusion Club</Link>
-                                    <Link   onClick={handleclick} to='/clubs/SwaraClub' className='qu-link-cm'>Swara Club</Link>
-                                    <Link   onClick={handleclick} to='/clubs/VachasClub' className='qu-link-cm'>Vachas Club</Link>
-                                    <Link   onClick={handleclick} to='/clubs/KLRadioClub' className='qu-link-cm'>KLRadio Club</Link>
-                                    <Link   onClick={handleclick} to='/clubs/FilmMakingClub' className='qu-link-cm'>Film Technology Club</Link>
-                                    <Link   onClick={handleclick} to='/clubs/DramaticsClub' className='qu-link-cm'>Dramatics Club</Link>
-                                    <Link   onClick={handleclick} to='/clubs/DramaticsClub' className='qu-link-cm'>Art Club (Art Tribe)</Link>
+                                  {/* onClick={handleclick} to='/clubs/StandupComedyClub' */}
+                                    <Link    className='qu-link-cm'>Standup Comedy Club</Link>
+                                    {/* onClick={handleclick} to='/clubs/SwaraClub' */}
+                                    <Link   className='qu-link-cm'>Swara Club (Music)</Link>
+                                    {/* onClick={handleclick} to='/clubs/SwaraClub' */}
+                                    <Link    className='qu-link-cm'>Photography Club</Link>
+                                    {/* onClick={handleclick} to='/clubs/SwaraClub' */}
+                                    <Link   className='qu-link-cm'>Film Making Club</Link>
+                                    {/* onClick={handleclick} to='/clubs/FusionClub' */}
+                                    <Link   className='qu-link-cm'>Fusion Club (Dance)</Link>
+                                    {/* onClick={handleclick} to='/clubs/FusionClub' */}
+                                    <Link  className='qu-link-cm'>Narthana Club (Dance)</Link>
+                                    {/* onClick={handleclick} to='/clubs/VachasClub' */}
+                                    <Link   className='qu-link-cm'>Literature Club (Vachas)</Link>
+                                    {/* onClick={handleclick} to='/clubs/VachasClub' */}
+                                    <Link  className='qu-link-cm'>Script Writing Club (Versatales)</Link>
+                                    {/* onClick={handleclick} to='/clubs/FusionClub' */}
+                                    <Link  className='qu-link-cm'>Fusion Club</Link>
+                                    {/* onClick={handleclick} to='/clubs/SwaraClub'  */}
+                                    <Link className='qu-link-cm'>Swara Club</Link>
+                                    {/* onClick={handleclick} to='/clubs/VachasClub' */}
+                                    <Link   className='qu-link-cm'>Vachas Club</Link>
+                                    {/* onClick={handleclick} to='/clubs/KLRadioClub' */}
+                                    <Link  className='qu-link-cm'>KLRadio Club</Link>
+                                    {/* onClick={handleclick} to='/clubs/FilmMakingClub' */}
+                                    <Link  className='qu-link-cm'>Film Technology Club</Link>
+                                    {/* onClick={handleclick} to='/clubs/DramaticsClub'  */}
+                                    <Link className='qu-link-cm'>Dramatics Club</Link>
+                                    {/* onClick={handleclick} to='/clubs/DramaticsClub'  */}
+                                    <Link className='qu-link-cm'>Art Club (Art Tribe)</Link>
                                 </div>
 
                                 <div className="quick-link-three-in">
                                   <h1>Innovation</h1>
-                                  <Link onClick={handleclick} className='qu-link-cm'>ACIC</Link>
-                                  <Link onClick={handleclick} className='qu-link-cm'>TBI</Link>
-                                  <Link onClick={handleclick} className='qu-link-cm'>CIIE</Link>
+                                  {/* onClick={handleclick} */}
+                                  <Link className='qu-link-cm'>ACIC</Link>
+                                  {/* onClick={handleclick} */}
+                                  <Link className='qu-link-cm'>TBI</Link>
+                                  {/* onClick={handleclick} */}
+                                  <Link className='qu-link-cm'>CIIE</Link>
                                 </div>
                                 <div className="quick-link-four-in">
                                   <h1> Outreach</h1>
-                                  <Link   onClick={handleclick} to='/clubs/smartvillagerevolution' className='qu-link-cm'>Smart Village Revolution</Link>
-                                  <Link   onClick={handleclick} to='/clubs/SafeLifeClub' className='qu-link-cm'>SafeLife Club</Link>
-                                  <Link   onClick={handleclick} to='/clubs/TourismClub' className='qu-link-cm'>Yuva Tourism Club</Link>
-                                  <Link   onClick={handleclick} to='/clubs/KLTalksClub' className='qu-link-cm'>KL Talks Club</Link>
-                                 
-                                  <Link   onClick={handleclick} to='/clubs/ElectoralClub' className='qu-link-cm'>Electoral Club</Link>
-                                  <Link   onClick={handleclick} to='/clubs/CEAClub' className='qu-link-cm'>CEA</Link>
-                                  <Link   onClick={handleclick} to='/clubs/CEAClub' className='qu-link-cm'>YRC</Link>
-                                  <Link   onClick={handleclick} to='/clubs/CEAClub' className='qu-link-cm'>NSS</Link>
-                                  <Link   onClick={handleclick} to='/clubs/CEAClub' className='qu-link-cm'>NCC</Link>
-                                  <Link   onClick={handleclick} to='/clubs/CEAClub' className='qu-link-cm'>Ohana</Link>
-                                  <Link   onClick={handleclick} to='/clubs/CEAClub' className='qu-link-cm'>Kutumb</Link>
+                                  {/* onClick={handleclick} */}
+                                  <Link to='/clubs/smartvillagerevolution' className='qu-link-cm'>Smart Village Revolution</Link>
+                                  {/* onClick={handleclick} */}
+                                  <Link  to='/clubs/SafeLifeClub' className='qu-link-cm'>SafeLife Club</Link>
+                                  {/* onClick={handleclick}  */}
+                                  <Link to='/clubs/TourismClub' className='qu-link-cm'>Yuva Tourism Club</Link>
+                                  {/* onClick={handleclick} */}
+                                  <Link  to='/clubs/KLTalksClub' className='qu-link-cm'>KL Talks Club</Link>
+                                  {/* onClick={handleclick} to='/clubs/ElectoralClub' */}
+                                  <Link  className='qu-link-cm'>Electoral Club</Link>
+                                  {/* onClick={handleclick} to='/clubs/CEAClub' */}
+                                  <Link  className='qu-link-cm'>CEA</Link>
+                                  {/* onClick={handleclick} to='/clubs/CEAClub' */}
+                                  <Link  className='qu-link-cm'>YRC</Link>
+                                  {/* onClick={handleclick} to='/clubs/CEAClub' */}
+                                  <Link  className='qu-link-cm'>NSS</Link>
+                                  {/* onClick={handleclick} to='/clubs/CEAClub'  */}
+                                  <Link className='qu-link-cm'>NCC</Link>
+                                  {/* onClick={handleclick} to='/clubs/CEAClub'  */}
+                                  <Link className='qu-link-cm'>Ohana</Link>
+                                  {/* onClick={handleclick} to='/clubs/CEAClub'  */}
+                                  <Link className='qu-link-cm'>Kutumb</Link>
                                  
                                 </div>
                             </div>
