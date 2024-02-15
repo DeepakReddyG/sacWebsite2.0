@@ -601,13 +601,13 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                 </div>
                 <div className="ue-comps-in-two">
                 <div className="ue-comps-in-two-in">
-                  <h2>Strings in Java</h2>
-                  <p>10th October, 2023</p>
+                  <h2>Figma Master Class</h2>
+                  <p>19th February, 2024</p>
                 </div>
                   <div className="ue-comps-in-two-in-in">
                   <add-to-calendar-button
-                        name="Strings in Java"
-                        startDate="2022-10-10"
+                        name="Python Flask"
+                        startDate="2024-19-02"
                         options="['Google']"
                       >
                     </add-to-calendar-button>
@@ -623,13 +623,13 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                 </div>
                 <div className="ue-comps-in-two">
                 <div className="ue-comps-in-two-in">
-                  <h2>Python Flask</h2>
-                  <p>10th October, 2023</p>
+                  <h2>System Administration</h2>
+                  <p>17th February, 2024</p>
                 </div>
                   <div className="ue-comps-in-two-in-in">
                   <add-to-calendar-button
                         name="Python Flask"
-                        startDate="2022-10-10"
+                        startDate="2024-17-02"
                         options="['Google']"
                       >
                     </add-to-calendar-button>
@@ -646,13 +646,13 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                 <div className="ue-comps-in-two">
 
                 <div className="ue-comps-in-two-in">
-                  <h2>Version Control</h2>
-                  <p>10th October, 2023</p>
+                  <h2>Python for beginners</h2>
+                  <p>12th February, 2024</p>
                 </div>
                   <div className="ue-comps-in-two-in-in">
                   <add-to-calendar-button
                         name="Version Control"
-                        startDate="2022-10-10"
+                        startDate="2024-12-02"
                         options="['Google']"
                       >
                     </add-to-calendar-button>
@@ -669,13 +669,13 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                 </div>
                 <div className="ue-comps-in-two">
                   <div className="ue-comps-in-two-in">
-                    <h2>Power Automate</h2>
-                    <p>10th October, 2023</p>
+                    <h2>Coding Contest Week 03</h2>
+                    <p>11th February, 2024</p>
                   </div>
                   <div className="ue-comps-in-two-in-in">
                     <add-to-calendar-button
                         name="Power Automate"
-                        startDate="2022-10-10"
+                        startDate="2024-11-02"
                         options="['Google']"
                       >
                     </add-to-calendar-button>
@@ -722,18 +722,18 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
             </div>
             <div className="officers-in-two">
                 <div className="officers-in-two-in">
-                <div className="profile-card">
+                    <div className="profile-card">
                         <img src={Director} alt="" />
                         <h2>Mr P Sai Vijay</h2>
                         <p>Director, SAC</p>
                         <p>director_sac@kluniversity.in</p>
                     </div>
-                    <div className="profile-card">
+                    {/* <div className="profile-card">
                         <img src={chairman} alt="" />
                         <h2>Parth Deepak Thakker</h2>
                         <p>Chairman, Student Council</p>
                         <p>ECE, 4th Year</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
           </div>

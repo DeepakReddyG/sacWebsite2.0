@@ -1248,7 +1248,7 @@
     margin: auto;
 }
 .officers-in-one {
-    width: 50%;
+    width: 60%;
 }
 
 .leadership-link {
@@ -1277,8 +1277,9 @@
     font-size: 1.3rem;
     margin: 2rem 0rem;
 }
+
 .officers-in-two {
-    width: 50%;   
+    width: 40%;   
 }
 
 .officers-in-two-in {
@@ -1288,11 +1289,10 @@
 
  .profile-card {
     background-color: #fff;
-    max-width: 47%;
+    max-width: 60%;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    
 }
 
 .profile-card img {
