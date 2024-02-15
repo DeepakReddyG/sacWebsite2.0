@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import ClubPage from './clubspage';
 
@@ -44,7 +44,7 @@ const ClubPageApp = () => {
             path: '/',
             component: ClubPage
         },
-        {
+        { 
             name: 'ZeroOne Code Club',
             path: 'zeroonecodeclub',
             component: ZeroOneCodeClub

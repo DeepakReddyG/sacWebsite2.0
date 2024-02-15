@@ -44,6 +44,10 @@ import GetAttendance from "./SIL/attendance/GetAttendance";
 import Admin from './Admin/Admin'
 import Addevent from "./Admin/events/Addevent";
 
+// clubs
+
+import ClubPage from "./ClubPages/ClubPageApp";
+
 
 function App() {
 
@@ -106,6 +110,7 @@ function App() {
              <Route path="/registrationtable" element={<RegistrationTable />} />
              <Route path="/registrationdata" element={<RegistrationData />} />
              <Route path="/departmentwise" element={<DepartmentWise />} />
+             <Route path="/clubs/*" element={<ClubPage />} />
              <Route path="*" element={<NotFound />} />
 
              {/* sil routes */}
