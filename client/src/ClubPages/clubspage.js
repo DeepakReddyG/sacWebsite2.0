@@ -2,7 +2,6 @@ import React from 'react';
 import './clubspage.css';
 import { Link as Scroll } from 'react-scroll';
 import { Link } from 'react-router-dom';
-import Marquee from "react-fast-marquee";
 
 import Footer from '../components/home/Footer/Footer';
 

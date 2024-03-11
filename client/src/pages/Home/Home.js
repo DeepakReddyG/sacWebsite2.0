@@ -856,7 +856,7 @@ const [screenWidth, setScreenWidth] = useState(window.innerWidth);
                             <div className="quick-link-one">
                               <div className="quick-link-one-in">
                                    <h1>Technology</h1>
-                                   <Link   onClick={handleclick} to='/clubs/zeroonecodeclub' className='qu-link-cm'>ZeroOne CodeClub</Link>
+                                   <Link   onClick={handleclick} to='/clubs/ZeroOne' className='qu-link-cm'>ZeroOne CodeClub</Link>
                                    <Link   onClick={handleclick} to='/clubs/aeroelectricclub' className='qu-link-cm'>AeroElectric Club</Link>
                                    <Link   onClick={handleclick} to='/clubs/cyberclub' className='qu-link-cm'>Cyber Security Club </Link>
                                    <Link   onClick={handleclick} to='/clubs/WebAppsClub' className='qu-link-cm'>WebApps Club </Link>
