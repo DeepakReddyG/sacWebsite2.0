@@ -3,9 +3,6 @@ import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
-//import components here
-
-//import pages here
 import Home from "../src/pages/Home/Home";
 import Leadership from "../src/pages/Leadership/Page";
 import ClubsPage from "../../client/src/ClubPages/ClubPageApp";
@@ -24,31 +21,10 @@ import RegistrationData from "./pages/SilRegistrations/RegistrationData";
 import DepartmentWise from "./pages/SilRegistrations/DepartmentWise";
 
 
-// Authentication Routes here
-import Login from './pages/Auth/Login/Login'
-import Layout from './components/authentication/Layout'
-import RequireAuth from './components/authentication/RequireAuth'
-import PersistLogin from './components/authentication/PersistLogin'
-import Forgot from './pages/Auth/forgot/Forgot'
-import Reset from './pages/Auth/reset/Reset'
-import Request from './pages/Auth/request/Request'
-import UnAuth from './pages/Auth/unAuth/UnAuth'
-
-
-// SIL Routes here
-
 import SIL from "./SIL/Page"
-import GetAttendance from "./SIL/attendance/GetAttendance";
 
-// Require Authentication routes here
-import Admin from './Admin/Admin'
-import Addevent from "./Admin/events/Addevent";
-
-// clubs
 
 import ClubPage from "./ClubPages/ClubPageApp";
-
-
 function App() {
 
   const [isLoading, setLoading] = useState(true);
@@ -74,25 +50,7 @@ function App() {
   return (
     <div className="App">
     <Routes>
-       <Route path="/" element={<Layout />}>
-         {/* persist login state here */}
-         <Route path="/" element={<PersistLogin />}>
-         {/* require authentication here */} 
-             
-
-             {/* require Admin authentication */}
-             <Route element={<RequireAuth allowedRoles={['Admin']}/>}>
-                <Route path="/admin" element={<Admin />} />
-                <Route path="/addevents" element={<Addevent />} />
-             </Route>
-
-             {/* public routes here */}
-             <Route path="/auth/login" element={<Login />} />
-             <Route path="/auth/forgot" element={<Forgot />} />
-             <Route path="/auth/reset/:id" element={<Reset />} />
-             <Route path="/auth/request/resend/:encryptedEmail" element={<Request />} />
-             <Route path="/unAuth" element={<UnAuth />} />
-             
+       <Route path="/">
 
              <Route path="/" element={<Home />} />
              <Route path="/leadership" element={<Leadership />} />
@@ -113,11 +71,6 @@ function App() {
              <Route path="/clubs/*" element={<ClubPage />} />
              <Route path="*" element={<NotFound />} />
 
-             {/* sil routes */}
-
-              <Route path="/sil/attendance" element={<GetAttendance />} />
-
-         </Route>
        </Route>
     </Routes>
  </div>
