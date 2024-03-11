@@ -46,11 +46,8 @@ const [open, setOpen] = React.useState(false);
                 <img src={ZeroOneLogo} alt="" />
             </div>
             <div className="nav-details">
-              <Link to='/' className='backtosac'>SAC</Link>
-              <NavItem to="club-hero-content" text="Home" />
-              <NavItem to="club-about-content" text="About" />
-              <Link to='/' className='backtosac'>Members</Link>
-              <Link to='/' className='backtosac'>More</Link>
+              <Link to='/' className='backtosac'>Explore SAC</Link>
+              <Link to='/clubs' className='backtosac'>K L University</Link>
             </div>
           </div>
   
